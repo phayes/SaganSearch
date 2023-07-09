@@ -33,7 +33,8 @@ If you decide you want to run SaganSearch, please email me at patrick.d.hayes@gm
 1. Use direct ycd files instead of the web API for fetching digits
 2. Turn SaganSearch into a proper distributed system
 3. Explore other ways of looking for signal other than the Shannon Entropy Metric
-4. Official release on Mar 14, 2024
+4. **Official release on Mar 14, 2024**
+5. Add Euler's Number and other transendentals. 
 
 ## Results
 
