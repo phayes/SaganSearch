@@ -8,7 +8,7 @@ SaganSearch works by looking for regions in π that contain relatively low entro
 
 ## Art
 
-This is an abstract art project that encourages thought about the fundemental nature of reality, and challenges the artifical cultural separation between creationism and science. If a message is found, it could mean our reality was created by an intelligent mind. 
+This is an abstract art project that encourages thought about the fundemental nature of reality and challenges the artifical cultural separation between creationism and science. If a message is found, it could mean our reality was created by an intelligent mind. 
 
 ## FAQ
 
