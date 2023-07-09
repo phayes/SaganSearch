@@ -1,6 +1,6 @@
 # SaganSearch
 
-### Searching for artifical messages in π
+### Searching for artifical messages in the digits of pi
 
 This is an art project inspired by the final chapter of [Carl Sagan's *Contact*](https://en.wikipedia.org/wiki/Contact_(novel)). In the book, the main character discovers artificial messages encoded within transcendental numbers like π. This project aims to replicate that fictional search in reality.
 
