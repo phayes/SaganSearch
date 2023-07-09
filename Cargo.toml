@@ -7,10 +7,12 @@ edition = "2021"
 
 [dependencies]
 entropy = "0.4.1"
-reqwest = { version = "0.11.18", features =["json", "brotli"] }
+reqwest = { version = "0.11.18", features =["json", "brotli", "blocking"] }
 rug = "1.19.2"
-futures = "0.3.17"
-tokio = { version = "1", features = ["full"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 num-bigint = "0.4"
+textplots = "0.8.0"
+ctrlc = "3"
+console = "0.15"
+rgb = "0.8"
