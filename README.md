@@ -14,7 +14,7 @@ This is an abstract art project that encourages thought about the fundemental na
 
 **1. Why π and not other numbers?**
 
-π has not yet been proven to be [normal](https://en.wikipedia.org/wiki/Normal_number) and has been generated out to 100 trillion digits; it provides a great place to start the search. Any transcendental number that has not been proven normal would be a good candidate for a search. For example [Euler's Number](https://en.wikipedia.org/wiki/E_(mathematical_constant)) would be a good candidate for a search. Looking beyond transcendental numbers, other fundemental constructs like the [https://en.wikipedia.org/wiki/Monster_group](Monster Group) could be a fun place to look for signs of artificiality.
+π has not yet been proven to be [normal](https://en.wikipedia.org/wiki/Normal_number) and has been generated out to 100 trillion digits; it provides a great place to start the search. Any transcendental number that has not been proven normal would be a good candidate for a search (for example [Euler's Number](https://en.wikipedia.org/wiki/E_(mathematical_constant))). Looking beyond transcendental numbers, other fundemental constructs like the [Monster Group](https://en.wikipedia.org/wiki/Monster_group) could be a fun place to look for signs of artificiality.
 
 **2. What would it mean if a message is found?**
 
