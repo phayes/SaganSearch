@@ -12,15 +12,15 @@ This is an abstract art project that encourages thought about the fundemental na
 
 ## FAQ
 
-1. Why π and not other numbers?
+**1. Why π and not other numbers?**
 
 π has not yet been proven to be [normal](https://en.wikipedia.org/wiki/Normal_number) and has been generated out to 100 trillion digits; it provides a great place to start the search. Any transcendental number that has not been proven normal would be a good candidate for a search. For example [Euler's Number](https://en.wikipedia.org/wiki/E_(mathematical_constant)) would be a good candidate for a search. Looking beyond transcendental numbers, other fundemental constructs like the [https://en.wikipedia.org/wiki/Monster_group](Monster Group) could be a fun place to look for signs of artificiality.
 
-2. What would it mean if a message is found?
+**2. What would it mean if a message is found?**
 
 In addition to the meaning of the message itself, a message in π would be more fundemental than finding proof of the creator of the universe. It would be proof of a mind that exists beyond fundemental reality. 
 
-3. Do you really expect to find a message?
+**3. Do you really expect to find a message?**
 
 No. This is framed as an art project because it's primary purpose is to provoke interesting thoughts about the nature of reality. But who knows, maybe a message really is there!
 
