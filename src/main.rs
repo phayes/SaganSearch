@@ -57,7 +57,7 @@ fn main() {
         }
     };
 
-    // run until we get ctrl+C
+    // run until we get ctrl+C or a potential message is found
     while should_run.as_ref().load(Ordering::Acquire) {
         let url = format!(
             "https://api.pi.delivery/v1/pi?start={}&numberOfDigits={}&radix=10",
@@ -77,7 +77,12 @@ fn main() {
             std::process::exit(1);
         });
         let digits: BigUint = resp.content.parse().unwrap();
-        let digit_bytes = digits.to_bytes_be();
+        let mut digit_bytes = digits.to_bytes_be();
+
+        // Prepend to fill to 416 bytes
+        while digit_bytes.len() < 416 {
+            digit_bytes.insert(0, 0);
+        }
 
         // TODO: prepend zeros to fill bytes to
         let entropy = shannon_entropy(&digit_bytes) / 8.0;
@@ -120,7 +125,7 @@ fn main() {
         term.move_cursor_to(0, 100).unwrap();
         print!("Digit: {} \t\t\t Entropy: {}", digit_start, entropy);
 
-        // Go to the next digit
+        // Go to the next set of digits
         digit_start = digit_start - DIGITS_PER_REQUEST;
     }
 
