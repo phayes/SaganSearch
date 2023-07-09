@@ -1,4 +1,4 @@
-# SaganSearch (alpha)
+# SaganSearch
 
 ### Searching for artifical messages in the digits of pi
 
