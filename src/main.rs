@@ -13,7 +13,6 @@ pub struct Resp {
     content: String,
 }
 
-static DIGIT_START: std::sync::atomic::AtomicU64 = AtomicU64::new(100000000000000);
 const DIGITS_PER_REQUEST: usize = 1000;
 
 // URL: https://api.pi.delivery/v1/pi?start=100000000000000&numberOfDigits=1000&radix=10
@@ -46,13 +45,20 @@ fn main() {
     .user_agent("SaganSearch (https://github.com/phayes/SaganSearch, email patrick.d.hayes@gmail.com for questions)")
     .build().unwrap();
 
-    // run until we get ctrl+C
-    let mut digit_start: usize = 100000000000000;
-    while should_run.as_ref().load(Ordering::Acquire) {
-        //if digit_start % 10000 == 0 {
-        //    eprintln!("Analysing π at digit {}", digit_start);
-        //}
+    // Get arguments and check where we should start the search
+    let mut digit_start: usize = {
+        let args: Vec<String> = std::env::args().collect();
 
+        if args.len() >= 2 {
+            let start_digit: BigUint = args[1].parse().unwrap();
+            start_digit.try_into().unwrap()
+        } else {
+            100000000000000
+        }
+    };
+
+    // run until we get ctrl+C
+    while should_run.as_ref().load(Ordering::Acquire) {
         let url = format!(
             "https://api.pi.delivery/v1/pi?start={}&numberOfDigits={}&radix=10",
             digit_start, DIGITS_PER_REQUEST
@@ -77,6 +83,7 @@ fn main() {
         let entropy = shannon_entropy(&digit_bytes) / 8.0;
         if entropy < 0.9 && entropy != 0.0 {
             let digit_end = digit_start + DIGITS_PER_REQUEST;
+            eprintln!("Great success!");
             eprintln!(
                 "Found anomalous entropy between digits {} and {}: {}",
                 digit_start, digit_end, entropy
