@@ -2,7 +2,7 @@
 
 ### Searching for artifical messages in π
 
-This is an art project inspired by the final chapter in [Carl Sagan's *Contact*](https://en.wikipedia.org/wiki/Contact_(novel)). In the book, the main character discovers artificial messages encoded within transcendental numbers like π. This project aims to replicate that fictional search in reality.
+This is an art project inspired by the final chapter of [Carl Sagan's *Contact*](https://en.wikipedia.org/wiki/Contact_(novel)). In the book, the main character discovers artificial messages encoded within transcendental numbers like π. This project aims to replicate that fictional search in reality.
 
 SaganSearch works by looking for regions in π that contain relatively low entropy as measured by the [Shannon Entropy Metric](https://en.wikipedia.org/wiki/Entropy_(information_theory)). The search has been started at 100 trillion digits into π and is working backwards towards the beginning 1000 digits at a time.
 
