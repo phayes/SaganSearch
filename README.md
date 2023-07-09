@@ -20,7 +20,7 @@ This is an abstract art project that encourages thought about the fundemental na
 
 The implications of a message would be profound. 
 
-The message might contain many thins. Maybe it would simply be a sigil, a cosmic "I'm here" that conveys no furthur information. Or it might contain information about the nature of reality or conciousness. Maybe it contains the solution to the [Hard problem of conciousness](https://en.wikipedia.org/wiki/Hard_problem_of_consciousness), or instructions on building a mysterious machine, or the solution to the Riemann hypothesis or simply a "hello world!" written into the nature of reality. 
+The message might contain many things. Maybe it would simply be a sigil, a cosmic "I'm here" that conveys no furthur information. Or it might contain information about the nature of reality or conciousness. Maybe it contains the solution to the [Hard problem of conciousness](https://en.wikipedia.org/wiki/Hard_problem_of_consciousness), or instructions on building a mysterious machine, or the solution to the Riemann hypothesis or simply a "hello world!" written into the nature of reality. 
 
 In addition to the meaning of the message itself, a message in π would could mean that our reality was created by an intelligent mind. It could also mean that fundemental truths are in a certain sense arbitrary and artificial. It could mean that there are alternative realities out there where `1 + 1 = 3` despite this statement being totally nonsense within our reality. The implications on our understanding of reality would be profound.
 
