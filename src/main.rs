@@ -66,6 +66,12 @@ fn main() {
 
         let http_resp = client.get(url).send().unwrap();
 
+        if http_resp.status() == 429 {
+            use std::{thread, time};
+            thread::sleep(time::Duration::from_secs(30));
+            continue;
+        }
+
         let body = http_resp.bytes().unwrap();
 
         let resp: Resp = serde_json::from_slice(&body).unwrap_or_else(|e| {
@@ -79,12 +85,11 @@ fn main() {
         let digits: BigUint = resp.content.parse().unwrap();
         let mut digit_bytes = digits.to_bytes_be();
 
-        // Prepend to fill to 416 bytes
+        // Prepend to fill to 416 bytes since we are using 1000 digits and the digits might start with zero
         while digit_bytes.len() < 416 {
             digit_bytes.insert(0, 0);
         }
 
-        // TODO: prepend zeros to fill bytes to
         let entropy = shannon_entropy(&digit_bytes) / 8.0;
         if entropy < 0.9 && entropy != 0.0 {
             let digit_end = digit_start + DIGITS_PER_REQUEST;
