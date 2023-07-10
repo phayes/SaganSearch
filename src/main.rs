@@ -1,7 +1,6 @@
 use entropy::shannon_entropy;
 use num_bigint::BigUint;
 use reqwest::blocking::Client;
-use std::sync::atomic::AtomicU64;
 use std::sync::{
     atomic::{AtomicBool, Ordering},
     Arc,
@@ -133,6 +132,8 @@ fn main() {
         // Go to the next set of digits
         digit_start = digit_start - DIGITS_PER_REQUEST;
     }
+    println!("");
+    println!("Ended search at digit: {}", digit_start);
 
     // re-reveal the cursor
     let term = console::Term::stdout();
