@@ -38,9 +38,6 @@ jobs:
           - target: x86_64-apple-darwin
             archive: tar.gz
             name: x86_64-apple-darwin
-          - target: aarch64-apple-darwin
-            archive: tar.gz
-            name: aarch64-apple-darwin
     runs-on: ubuntu-latest
     steps:
       - name: Clone test repository
