@@ -4,10 +4,14 @@ on:
     tags:
       - "v*"
 
+permissions:
+  contents: 'write'
+  id-token: 'write'
+  issues: 'write'
+
 jobs:
   release:
     name: Create Release
-    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -24,7 +28,6 @@ jobs:
 
   publish:
     name: publish ${{ matrix.name }}
-    permissions: write-all
     needs:
       - release
     strategy:
