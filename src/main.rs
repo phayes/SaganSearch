@@ -51,14 +51,28 @@ fn main() {
         }
     };
 
+    let mut error_message = String::new();
+
     // run until we get ctrl+C or a potential message is found
     while should_run.as_ref().load(Ordering::Acquire) {
+        error_message = "".to_string();
+
         let url = format!(
             "https://api.pi.delivery/v1/pi?start={}&numberOfDigits={}&radix=10",
             digit_start, DIGITS_PER_REQUEST
         );
 
-        let http_resp = minreq::get(url).with_header("User-Agent", USER_AGENT).send().unwrap();
+        let http_resp = minreq::get(url).with_header("User-Agent", USER_AGENT).send();
+
+        if http_resp.is_err() {
+            use std::{thread, time};
+            term.move_cursor_to(0, 100).unwrap();
+            print!("Error: {}", http_resp.unwrap_err());
+            thread::sleep(time::Duration::from_secs(30));
+            continue;
+        }
+
+        let http_resp = http_resp.unwrap();
 
         if http_resp.status_code == 429 {
             use std::{thread, time};
@@ -122,7 +136,7 @@ fn main() {
             .linecolorplot(&Shape::Lines(&target), GREEN)
             .display();
         term.move_cursor_to(0, 100).unwrap();
-        print!("Digit: {} \t\t\t Entropy: {}", digit_start, entropy);
+        print!("Digit: {} \t\t\t Entropy: {} \t\t\t {}", digit_start, entropy, error_message);
 
         // Go to the next set of digits
         digit_start = digit_start - DIGITS_PER_REQUEST;
