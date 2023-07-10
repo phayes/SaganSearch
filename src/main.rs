@@ -1,6 +1,5 @@
 use entropy::shannon_entropy;
 use num_bigint::BigUint;
-use reqwest::blocking::Client;
 use std::sync::{
     atomic::{AtomicBool, Ordering},
     Arc,
@@ -19,6 +18,7 @@ const DIGITS_PER_REQUEST: usize = 1000;
 const PRINT_LEN: usize = 100;
 const WHITE: rgb::RGB8 = rgb::RGB8::new(0xFF, 0xFF, 0xFF);
 const GREEN: rgb::RGB8 = rgb::RGB8::new(0x00, 0xFF, 0x00);
+const USER_AGENT: &str = "SaganSearch (https://github.com/phayes/SaganSearch, email patrick.d.hayes@gmail.com for questions)";
 
 fn main() {
     let should_run = Arc::new(AtomicBool::new(true));
@@ -39,11 +39,6 @@ fn main() {
     })
     .unwrap();
 
-    // Build the http client for fetching digits
-    let client = Client::builder()
-    .user_agent("SaganSearch (https://github.com/phayes/SaganSearch, email patrick.d.hayes@gmail.com for questions)")
-    .build().unwrap();
-
     // Get arguments and check where we should start the search
     let mut digit_start: usize = {
         let args: Vec<String> = std::env::args().collect();
@@ -63,15 +58,15 @@ fn main() {
             digit_start, DIGITS_PER_REQUEST
         );
 
-        let http_resp = client.get(url).send().unwrap();
+        let http_resp = minreq::get(url).with_header("User-Agent", USER_AGENT).send().unwrap();
 
-        if http_resp.status() == 429 {
+        if http_resp.status_code == 429 {
             use std::{thread, time};
             thread::sleep(time::Duration::from_secs(30));
             continue;
         }
 
-        let body = http_resp.bytes().unwrap();
+        let body = http_resp.into_bytes();
 
         let resp: Resp = serde_json::from_slice(&body).unwrap_or_else(|e| {
             eprintln!("Got a serde_json::Error: {}", e);
