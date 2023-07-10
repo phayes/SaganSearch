@@ -29,29 +29,26 @@ jobs:
       fail-fast: true
       matrix:
         include:
+          - target: x86_64-pc-windows-gnu
+            name: x86_64-pc-windows-gnu
+            archive: zip
           - target: x86_64-unknown-linux-gnu
-            suffix: linux-x86_64
-            archive: tar.xz
+            archive: tar.gz
             name: x86_64-unknown-linux-gnu
           - target: x86_64-apple-darwin
-            suffix: darwin-x86_64
             archive: tar.gz
             name: x86_64-apple-darwin
           - target: aarch64-apple-darwin
-            suffix: darwin-x86_64
             archive: tar.gz
             name: aarch64-apple-darwin
     runs-on: ubuntu-latest
     steps:
       - name: Clone test repository
         uses: actions/checkout@v2
-      - uses: xhaiker/rust-release.action@v1.0.0
+      - uses: rust-build/rust-build.action@v1.4.3
         name: build ${{ matrix.name }}
         with:
-          release: ${{ github.ref_name }}
-          rust_target: ${{ matrix.target }}
-          archive_suffix: ${{ matrix.suffix }}
-          archive_types: ${{ matrix.archive }}
-          extra_files: "README.md README_zh.md LICENSE"
+          RUSTTARGET: ${{ matrix.target }}
+          extra_files: "README.md LICENSE"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
