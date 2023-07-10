@@ -7,11 +7,11 @@ edition = "2021"
 
 [dependencies]
 entropy = "0.4.1"
-minreq = { version = "2.8.1", features = ["https-rustls"] }
+minreq = { version = "2", features = ["https-rustls"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 num-bigint = "0.4"
-textplots = "0.8.0"
+textplots = "0.8"
 ctrlc = "3"
 console = "0.15"
 rgb = "0.8"
