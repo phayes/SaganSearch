@@ -20,15 +20,15 @@ This is an abstract art project that encourages thought about the nature of real
 
 The implications of a message would be profound. 
 
-In addition to the meaning of the message itself, a message in π would could mean that our reality was created by an intelligent mind. It could also mean that fundemental truths are in a certain sense arbitrary and artificial. It could mean that there are alternative realities out there where `1 + 1 = 3` despite this statement being totally nonsense within our reality. The implications on our understanding of reality would be profound.
+In addition to the meaning of the message itself, a message in π would could mean that our reality was created by an intelligent mind. It could also mean that fundamental truths are in a certain sense arbitrary and artificial. It could mean that there are alternative realities out there where `1 + 1 = 3` despite this statement being totally nonsense within our reality. The implications on our understanding of reality would be profound.
 
 **3. Do you really expect to find a message?**
 
-Honestly, not really. This is framed as an art project because it's primary purpose is to provoke interesting thoughts about the nature of reality. But who knows, maybe a message really is there, deep in the digits of pi. 
+Honestly, not really. This is framed as an art project because its primary purpose is to provoke interesting thoughts about the nature of reality. But who knows, maybe a message really is there, deep in the digits of pi. 
 
 ## Joining the search
 
-If you decide you want to run SaganSearch, please email me at patrick.d.hayes@gmail.com so we can coodinate different search spaces within the digits of π.  I am also happy to accept pull requests that expand the project to other transcendental numbers, supports an organized distributed search, or any other improvements.
+If you decide you want to run SaganSearch, please email me at patrick.d.hayes@gmail.com so we can coordinate different search spaces within the digits of π.  I am also happy to accept pull requests that expand the project to other transcendental numbers, supports an organized distributed search, or any other improvements.
 
 ## Future development plans
 
@@ -36,7 +36,7 @@ If you decide you want to run SaganSearch, please email me at patrick.d.hayes@gm
 2. Turn SaganSearch into a proper distributed system
 3. Explore other ways of looking for signal other than the Shannon Entropy Metric
 4. Refine entropy cut-off point (currently set to 0.9)
-5. Add Euler's Number and other transendentals. 
+5. Add Euler's Number and other transcendentals. 
 
 ## Results
 
