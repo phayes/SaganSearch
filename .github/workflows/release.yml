@@ -32,9 +32,9 @@ jobs:
           - target: x86_64-pc-windows-gnu
             name: x86_64-pc-windows-gnu
             archive: zip
-          - target: x86_64-unknown-linux-gnu
+          - target: x86_64-unknown-linux-musl
             archive: tar.gz
-            name: x86_64-unknown-linux-gnu
+            name: x86_64-unknown-linux-musl
           - target: x86_64-apple-darwin
             archive: tar.gz
             name: x86_64-apple-darwin
