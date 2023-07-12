@@ -20,7 +20,7 @@ This is an abstract art project that encourages thought about the nature of real
 
 The implications of a message would be profound. 
 
-In addition to the meaning of the message itself, a message in π could mean that our reality was created by an intelligent mind. It could also mean that fundamental truths are in a certain sense arbitrary and artificial. It could mean that there are alternative realities out there where `1 + 1 = 3` despite this statement being totally nonsense within our reality. The implications on our understanding of reality would be profound.
+In addition to the meaning of the message itself, a message in π could mean that our reality was created by an intelligent mind. It could also mean that fundamental truths are in a certain sense arbitrary and artificial. The implications on our understanding of reality would be profound.
 
 **3. Do you really expect to find a message?**
 
